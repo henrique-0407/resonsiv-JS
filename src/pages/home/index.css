@@ -1,0 +1,133 @@
+@media(max-width: 768px){
+    
+}
+
+nav{
+    position:relative ;
+}
+
+.menu-toggle{
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+}
+
+nav ul{
+    list-style: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+}
+nav ul li{
+    display: inline;
+    margin: 0 10px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media(max-width: 768px){
+    .menu-toggle{
+        display: block;
+    }
+    .nae ul{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .nae ul li{
+        display: block;
+        margin: 10px 0;
+    }
+    .nae ul.showing{
+        display: flex;
+    }
+    footer{
+        position: static;
+    }
+}
+
+@media(max-width: 480px){
+    
+}
+@media(min-width:800px){
+    .mae {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h1{
+        font-family: a2;
+    }
+    a{
+        font-family: a3;
+    }
+    li{
+        font-family: a1;
+    }
+    img{
+       height: 400px;
+       width: auto;
+    }
+    .nae{
+        top: 0%;
+        background-color: black;
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .roda{
+
+    }
+  
+    
+    a {
+        color: beige;
+        font-size: 20px;
+        padding: 30px;
+        padding-bottom: 0%;
+        margin-bottom: 0%;
+    }
+    
+    .veloz{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card{
+        background-color: rgba(82, 1, 1, 0.425);
+        border-radius: 50px;
+        display:flex ;
+        flex-direction: row;
+        align-items: center;
+        max-width: 1000px;
+        
+    }
+    
+    .texto{
+        background-color: rgb(99, 1, 1);
+        padding: 20px;
+        font-size: 25px;
+        color:black;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+    }
+}
+

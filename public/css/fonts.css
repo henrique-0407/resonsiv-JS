@@ -1,0 +1,14 @@
+@font-face{
+    font-family: a1;
+    src: url(/public/assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face{
+    font-family: a2;
+    src: url(/public/assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face{
+    font-family: a3;
+    src: url(/public/assets/fonts/Roboto-Light.ttf);
+}
