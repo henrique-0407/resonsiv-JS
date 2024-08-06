@@ -1,65 +1,61 @@
 @media(max-width: 768px){
+    nav{
+        position:relative ;
+    }
     
-}
-
-nav{
-    position:relative ;
-}
-
-.menu-toggle{
-    display: none;
-    font-size: 2em;
-    cursor: pointer;
-    padding: 10px;
-}
-
-nav ul{
-    list-style: none;
-    font-size: 2em;
-    cursor: pointer;
-    padding: 10px;
-}
-nav ul li{
-    display: inline;
-    margin: 0 10px;
-}
-
-footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-@media(max-width: 768px){
     .menu-toggle{
+
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        color: aliceblue;
         display: block;
     }
-    .nae ul{
+    a{
+        color: beige;
+
+        
+    }
+    nav ul{
+        list-style: none;
+        font-size: 2em;
+        cursor: pointer;
+        padding: 10px;
         display: none;
         flex-direction: column;
         align-items: center;
-        
     }
-    .nae ul li{
+    nav ul li{
+        margin: 0 10px;
         display: block;
         margin: 10px 0;
+    }
+    .nae{
+        top: 0%;
+        background-color: black;
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
     }
     .nae ul.showing{
         display: flex;
     }
     footer{
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
         position: static;
+        width: 100%;
+        bottom: 0;
     }
-}
-
-@media(max-width: 480px){
     
 }
-@media(min-width:800px){
+
+
+@media(min-width:1200px){
     .mae {
         display: flex;
         flex-direction: column;
@@ -87,9 +83,7 @@ footer{
         flex-direction: column;
         align-items: center;
     }
-    .roda{
-
-    }
+    
   
     
     a {
@@ -128,6 +122,15 @@ footer{
         height: 400px;
         display: flex;
         align-items: center;
+    }
+    footer{
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+        bottom: 0;
     }
 }
 
