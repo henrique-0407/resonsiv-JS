@@ -1,24 +1,12 @@
 <?php
-// Create a connection to the database
-$servername = "localhost"; //LOBODELL\SQLEXPRESS
-$username = "root";  //LOBODELL\mathe
-$password = "1234";
-$dbname = "db_lobo"; //Locadora
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('conexao.php');
 
 // Criar tabela
 $sql = "CREATE TABLE IF NOT EXISTS users (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    login VARCHAR(30) NOT NULL,
+    login VARCHAR(30) NOT NULL unique,
     senha VARCHAR(255) NOT NULL,
-    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-)";
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)";
 $conn->query($sql);
 
 // Register user
@@ -30,11 +18,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->query($sql);
 
     echo "Cadastro realizado com sucesso! redirecionamento...Login"; 
-    echo "<!-- Redireciona para uma URL específica em html -->
-<meta http-equiv='refresh' content='5; url=http://localhost/ResponsivoSanduba/#login'>"; //redirecionamento em segundos
-/* Redireciona para uma URL específica em php
-header("Location: https://www.exemplo.com");
-exit;*/
+    echo "
+        <form action="/src/components/php/teste_login.php" method="POST">
+        <p>ENTRAR</p>
+        <label for="login">Login: </label><input type="text" name="login"><br>
+        <label for="senha">Senha: </label><input type="password" name="senha"><br>
+        <button type="submit">Entrar</button><br>
+
+        <a href="/src/components/php/cadastrar.php">Ainda não tenho conta.</a>
+    </form>
+    "; //redirecionamento em segundos
+/* Redireciona para uma URL específica em php header("Location: https://www.exemplo.com"); exit;*/
 } else {
     ?>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -46,6 +40,5 @@ exit;*/
     </form>
     <?php
 }
-
 $conn->close();
 ?>
